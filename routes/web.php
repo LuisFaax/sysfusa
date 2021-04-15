@@ -10,10 +10,15 @@ use App\Http\Livewire\UsuariosController;
 use App\Http\Livewire\RolesController;
 use App\Http\Livewire\PermisosController;
 use App\Http\Livewire\AnexosCatalogoController;
+use App\Http\Livewire\DecisionesCatalogoController;
+use App\Http\Livewire\DepartamentosCatalogoController;
+use App\Http\Livewire\EntidadesCatalogoController;
+use App\Http\Livewire\JuzgadosCatalogoController;
+use App\Http\Livewire\ProcesosCatalogoController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -52,6 +57,10 @@ Route::get('roles', RolesController::class);
 
 Route::get('permisos', PermisosController::class);
 
-// Catalogo
-
+// Catalogos
 Route::get('anexos/catalogo', AnexosCatalogoController::class);
+Route::get('decisiones/catalogo', DecisionesCatalogoController::class);
+Route::get('departamentos/catalogo', DepartamentosCatalogoController::class);
+Route::get('entidades/catalogo', EntidadesCatalogoController::class);
+Route::get('juzgados/catalogo', JuzgadosCatalogoController::class);
+Route::get('procesos/catalogo', ProcesosCatalogoController::class);

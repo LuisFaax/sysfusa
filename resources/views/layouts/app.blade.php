@@ -70,6 +70,12 @@
                                 </div>
                             </li>
                         @endguest
+                        <li class="nav-item">
+                             <a class="nav-link" href="{{ route('register') }}">Radicación Memoriales</a>                        
+                    </li>
+                     <li class="nav-item">
+                             <a class="nav-link" href="{{ route('register') }}">Consultar Historial</a>                        
+                    </li>
                     </ul>
                 </div>
             </div>

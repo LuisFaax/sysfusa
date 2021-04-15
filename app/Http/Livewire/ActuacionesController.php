@@ -6,6 +6,7 @@ use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 use App\Models\Actuacion;
+use App\Models\DecisionCatalogo;
 
 class ActuacionesController extends Component
 {
@@ -17,7 +18,7 @@ class ActuacionesController extends Component
 
 	public function mount()
 	{
-		$this->pageTitle = 'Listado';
+		$this->pageTitle = '';
 		$this->componentName = 'Registro y Consulta de Actuaciones';		
 	}
 
@@ -29,7 +30,8 @@ class ActuacionesController extends Component
 			$data= Actuacion::orderBy('anexo','asc')->paginate($this->pagination);
 
 		return view('livewire.actuaciones.component',[
-			'data' => $data
+			'data' => $data,
+			'decisiones' =>DecisionCatalogo::all()
 		])
 		->extends('layouts.theme.app')
 		->section('content');

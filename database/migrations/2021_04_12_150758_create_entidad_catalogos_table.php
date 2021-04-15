@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDepartamentosTable extends Migration
+class CreateEntidadCatalogosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateDepartamentosTable extends Migration
      */
     public function up()
     {
-        Schema::create('departamentos_catalogo', function (Blueprint $table) {
+        Schema::create('entidad_catalogos', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo',20);
-            $table->string('municipio',50);
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ class CreateDepartamentosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('departamentos_catalogo');
+        Schema::dropIfExists('entidad_catalogos');
     }
 }

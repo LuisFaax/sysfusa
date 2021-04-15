@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDepartamentosTable extends Migration
+class CreateDecisionCatalogosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateDepartamentosTable extends Migration
      */
     public function up()
     {
-        Schema::create('departamentos_catalogo', function (Blueprint $table) {
+        Schema::create('decision_catalogos', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo',20);
-            $table->string('municipio',50);
+            $table->string('decision',100);
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateDepartamentosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('departamentos_catalogo');
+        Schema::dropIfExists('decision_catalogos');
     }
 }
