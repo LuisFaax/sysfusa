@@ -3,53 +3,89 @@
 		<div class="col-12">
 			<div class="card">
 				<div class="card-header">
-					<h4 class="card-title"><b class='h3 font-weight-bold'>{{$componentName}}</b> | {{$pageTitle}}</b></h4>
+					<h4 class="card-title"><b class='h3 font-weight-bold'>{{$componentName}}</b>  {{$pageTitle}}</b></h4>
 					
 					<a class="heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
 					<div class="heading-elements">
-						<button class="btn btn-secondary btn-md" data-toggle="modal" data-target="#theModal"><i class="ft-check white"></i> Nuevo</button>
+						
 					</div>
 
 				</div>
 				<div class="card-content">
 					<div class="card-body">						
-						@include('common.searchbox')
+						<div class="row justify-content-between">
+							<div class="col-lg-3 col-md-3 col-sm-12">
+								<fieldset class="form-group position-relative has-icon-left">
+									<input type="text" 
+									wire:model="search"               
+									class="form-control"  placeholder="Ingresa el número de radicación">
+									<div class="form-control-position">
+										<i class="la la-search primary font-medium-5"></i>
+									</div>
+								</fieldset>
+							</div>
+
+						</div>
+
+<div class="row">
+<div class="col-sm-12 col-md-3 mt-3">
+	
+						
+							<div class="bs-callout-primary callout-border-left p-1">
+								<strong>CLASE PROCESO</strong>
+								<h5>Pertenencia</h5>
+							</div>
+							<div class="bs-callout-info callout-border-left mt-1 p-1">
+								<strong>DEMANDANTES</strong>
+								<h5>Maria Luna</h5>
+								<h5>José García</h5>
+							</div>
+							<div class="bs-callout-info callout-border-left mt-1 p-1">
+								<strong>DEMANDADOS</strong>
+								<h5>Carlos Valle</h5>
+								<h5>Jesús Alvez</h5>
+								<h5>Victoria Vaca</h5>
+							</div>
+						
+					
+</div>
+<div class="col-sm-12 col-md-9">
+	
+
 						<div class="table-responsive">
 							<table  class="table table-hover table-xl mb-0 table-de mt-1">
 								<thead class="bg-dark text-white">
 									<tr>
-										<th class="table-th">ANEXO</th>	
-										<th class="table-th text-center">ACTIONS</th>
+										<th class="table-th">ID</th>	
+										<th class="table-th">ACTUACION</th>	
+										<th class="table-th">DESCRIPCIÓN</th>	
+										<th class="table-th">AJUNTO</th>	
+										
 
 									</tr>
 								</thead>
 								<tbody>
-									@foreach($data as $r)
+									
 									<tr>
-										<td>{{$r->anexo}}</td>										
-										<td class="text-center">											
-											<a href="javascript:void(0);" wire:click="Edit({{$r->id}})" class="btn btn-warning" title="Edit">
-												<i class="la la-edit"></i>
-											</a>
-
-											<a href="javascript:void(0);" onclick="Confirm('{{$r->id}}')" 
-												class="btn btn-danger" title="Delete">
-												<i class="la la-trash la-xl"></i>
-											</a>											
-
-
-										</td>
+										<td>125</td>										
+										<td>AUTO DE SUSTANCIACION</td>										
+										<td>UNA DESCRIPCION</td>										
+										<td>arhivo.pdf</td>										
+										
 
 									</tr>
 
-									@endforeach
+									
 								</tbody>
 							</table>
-							{{$data->links()}}
+							{{$data->links('vendor.livewire.bootstrap')}}
 						</div>
+						</div>
+</div>
+
 					</div>
 				</div>
-				@include('livewire.anexoscatalogo.form')	
+				
 			</div>
 		</div>
 	</section>

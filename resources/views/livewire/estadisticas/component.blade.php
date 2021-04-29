@@ -13,7 +13,19 @@
 				</div>
 				<div class="card-content">
 					<div class="card-body">						
-						@include('common.searchbox')
+						<div class="row justify-content-between">
+							<div class="col-lg-4 col-md-4 col-sm-12">
+								<fieldset class="form-group position-relative has-icon-left">
+									<input type="text" 
+									wire:model="search"               
+									class="form-control"  placeholder="Buscar por clase de expediente">
+									<div class="form-control-position">
+										<i class="la la-search primary font-medium-5"></i>
+									</div>
+								</fieldset>
+							</div>
+
+						</div>
 						<div class="table-responsive">
 							<table  class="table table-hover table-xl mb-0 table-de mt-1">
 								<thead class="bg-dark text-white">

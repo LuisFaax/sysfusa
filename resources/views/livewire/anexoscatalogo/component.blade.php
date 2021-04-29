@@ -45,7 +45,7 @@
 									@endforeach
 								</tbody>
 							</table>
-							{{$data->links()}}
+							{{$data->links('vendor.livewire.bootstrap')}}
 						</div>
 					</div>
 				</div>

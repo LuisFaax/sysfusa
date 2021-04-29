@@ -17,7 +17,7 @@ class MemorialesController extends Component
 
 	public function mount()
 	{
-		$this->pageTitle = 'Listado';
+		$this->pageTitle = '';
 		$this->componentName = 'Radicación de Memoriales';		
 	}
 

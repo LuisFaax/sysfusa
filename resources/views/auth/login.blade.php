@@ -64,6 +64,7 @@
                                 @endif
                             </div>
                         </div>
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Radicación Memoriales</a>
                     </form>
                 </div>
             </div>

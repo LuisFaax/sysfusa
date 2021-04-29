@@ -17,8 +17,8 @@ class HistorialesController extends Component
 
 	public function mount()
 	{
-		$this->pageTitle = 'Listado';
-		$this->componentName = 'Historial Actuación';		
+		$this->pageTitle = '';
+		$this->componentName = 'Consultar Historial de Actuaciones';		
 	}
 
 	public function render()
