@@ -3,13 +3,11 @@
 		<div class="col-12">
 			<div class="card">
 				<div class="card-header">
-					<h4 class="card-title"><b class='h3 font-weight-bold'>{{$componentName}}</b> | {{$pageTitle}}</b></h4>
-					
+					<h4 class="card-title"><b class='h3 font-weight-bold'>{{$componentName}}</b> | {{$pageTitle}}</b></h4>					
 					<a class="heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
 					<div class="heading-elements">
 						<button class="btn btn-secondary btn-md" data-toggle="modal" data-target="#theModal"><i class="ft-check white"></i> Nuevo</button>
 					</div>
-
 				</div>
 				<div class="card-content">
 					<div class="card-body">						
@@ -20,7 +18,6 @@
 									<tr>
 										<th class="table-th">ANEXO</th>	
 										<th class="table-th text-center">fd</th>
-
 									</tr>
 								</thead>
 								<tbody>

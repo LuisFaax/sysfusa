@@ -53,6 +53,17 @@
 												<input type="file" wire:model.lazy="xxxx" class="form-control">
 											</div>											
 										</div>
+
+										<div class="form-group">
+										  	<label>Caja de comentarios</label>
+										  	<div class="position-relative has-icon-left">                   
+										    	<textarea class="form-control" cols="30" rows="5"></textarea>
+											    <div class="form-control-position">
+											      	<i class="ft-edit-2"></i>
+											    </div>
+										  	</div>
+										  	@error('anexo') <span class="text-danger">{{ $message }}</span> @enderror
+										</div>
 									</div>
 								</div>
 								<button class="btn btn-dark ml-2">ENVIAR</button>

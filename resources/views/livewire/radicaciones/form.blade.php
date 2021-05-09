@@ -12,6 +12,7 @@
 
         <div class="row">
           <div class="col-sm-12">
+
             <div class="form-group">
               <label><b>Código Único de Proceso</b></label>
               <div class="position-relative has-icon-left">
@@ -22,42 +23,44 @@
               </div>
               @error('radicado') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
+            @include('livewire.radicaciones.tipo')
           </div>  
         </div> 
 
         <ul class="nav nav-tabs nav-linetriangle no-hover-bg">
           <li class="nav-item">
-            <a class="nav-link active" id="base-tab-demandante" data-toggle="tab" aria-controls="tab-demandante" href="#tab-demandante" aria-expanded="true">DEMANDANTE</a>
+            <a class="nav-link active" id="base-tab-tipo-persona" data-toggle="tab" aria-controls="tab-tipo-persona" href="#tab-tipo-persona" aria-expanded="true">PERSONAS</a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" id="base-tab42" data-toggle="tab" aria-controls="tab42" href="#tab42" aria-expanded="false">DEMANDADO</a>
-          </li>
-          <li class="nav-item">
+          </li> --}}
+          {{-- <li class="nav-item">
             <a class="nav-link" id="base-tab43" data-toggle="tab" aria-controls="tab43" href="#tab43" aria-expanded="false">TIPO DE PROCESO</a>
-          </li>
+          </li> --}}
           <li class="nav-item">
             <a class="nav-link" id="base-tab44" data-toggle="tab" aria-controls="tab44" href="#tab44" aria-expanded="false">ADJUNTOS</a>
           </li>
         </ul>
+
         <div class="tab-content px-1 pt-1">
-          <div role="tabpanel" class="tab-pane active" id="tab-demandante" aria-expanded="true" aria-labelledby="base-tab-demandante">
+          <div role="tabpanel" class="tab-pane active" id="tab-tipo-persona" aria-expanded="true" aria-labelledby="base-tab-tipo-persona">
             <div class="row">
               <!-- INICIA DEMANDANTE -->
-              @include('livewire.radicaciones.demandante')
+              @include('livewire.radicaciones.tipopersona')
             </div>
           </div>
-          <div class="tab-pane" id="tab42" aria-labelledby="base-tab42">
+          {{-- <div class="tab-pane" id="tab42" aria-labelledby="base-tab42">
             <div class="row">
-              <!-- INICIA DEMANDADO -->
+              INICIA DEMANDADO
               @include('livewire.radicaciones.demandado')
             </div>
-          </div>
-          <div class="tab-pane" id="tab43" aria-labelledby="base-tab43">
+          </div> --}}
+          {{-- <div class="tab-pane" id="tab43" aria-labelledby="base-tab43">
             <div class="row">
-              <!-- TIPO DE PROCESO -->
+              TIPO DE PROCESO
               @include('livewire.radicaciones.tipo')
             </div>
-          </div>
+          </div> --}}
           <div class="tab-pane" id="tab44" aria-labelledby="base-tab44">
             <div class="row">
               <!-- ADJUNTOS -->
@@ -66,22 +69,4 @@
           </div>
         </div>
 
-
-
-
-
-
-
-
-
-        
-
-
-        
-
-
-        
-
-
-        
         @include('common.modalFooter')

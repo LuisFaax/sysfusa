@@ -1,0 +1,6 @@
+Habilitar una landing page donde sera la vista 
+principal Radicacion de memoriales 
+
+
+----- S3 ------
+(AWS)

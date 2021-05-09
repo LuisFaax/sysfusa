@@ -14,6 +14,7 @@ class ActuacionesController extends Component
 	use WithFileUploads;
 
 	public $anexo, $search, $selected_id, $pageTitle,$componentName;
+	
 	private $pagination = 3;
 
 	public function mount()
