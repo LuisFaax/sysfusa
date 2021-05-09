@@ -15,9 +15,14 @@
 						<div class="table-responsive">
 							<table  class="table table-hover table-xl mb-0 table-de mt-1">
 								<thead class="bg-dark text-white">
-									<tr>
-										<th class="table-th">ANEXO</th>	
-										<th class="table-th text-center">fd</th>
+									<tr>										
+										<th class="table-th text-center">Id</th>
+										<th class="table-th text-center">Nombre</th>
+										<th class="table-th text-center">Identificación</th>
+										<th class="table-th text-center">Correo electrónico</th>
+										<th class="table-th text-center">Teléfono</th>
+										<th class="table-th text-center">Tipo de Persona</th>
+										<th class="table-th">Anexo</th>	
 									</tr>
 								</thead>
 								<tbody>
